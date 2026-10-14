@@ -62,4 +62,18 @@ export const projects: Project[] = [
       source: 'https://github.com/radek-dev/marimo-notebooks',
     },
   },
+  {
+    title: 'The Central Limit Theorem',
+    summary: 'A reproducible Quarto article with equations, citations and simulation.',
+    tags: ['Quarto', 'statistics', 'uv'],
+    thumbnail: 'thumbnails/central-limit-theorem.svg',
+    question: 'How quickly do means of a skewed distribution become approximately normal?',
+    approach: 'Simulate 5,000 sample means at several sample sizes and compare them to the normal curve.',
+    result: 'Skewness falls from about 2.0 at n = 1 to about 0.1 at n = 200.',
+    dataNotes: 'Synthetic exponential data with a fixed seed; reproduce with uv sync && uv run quarto render.',
+    links: {
+      notebook: 'https://radek-dev.github.io/quarto-notebooks/clt.html',
+      source: 'https://github.com/radek-dev/quarto-notebooks',
+    },
+  },
 ];

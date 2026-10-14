@@ -9,8 +9,9 @@ The site is a static [Astro](https://astro.build) gallery and navigation hub. It
 | Content | Hosted on |
 | :-- | :-- |
 | Portfolio site | GitHub Pages (built from this repo) |
-| [marimo](https://marimo.io) notebooks | [molab](https://molab.marimo.io) previews of public GitHub repos |
-| [Streamlit](https://streamlit.io) apps | Streamlit Community Cloud |
+| [marimo](https://marimo.io) notebooks | [molab](https://molab.marimo.io) previews of public GitHub repos ([marimo-notebooks](https://github.com/radek-dev/marimo-notebooks)) |
+| [Quarto](https://quarto.org) notebooks | GitHub Pages ([quarto-notebooks](https://github.com/radek-dev/quarto-notebooks)) |
+| [Streamlit](https://streamlit.io) apps | Streamlit Community Cloud ([streamlit-apps](https://github.com/radek-dev/streamlit-apps)) |
 | Source code | Public GitHub repositories |
 
 ## Commands
@@ -35,6 +36,9 @@ Each project card needs a title, short summary, topic tags, thumbnail, and links
 - **marimo notebook:** keep the `.py` file in a public repo and link to
   `https://molab.marimo.io/github/OWNER/REPO/blob/main/path/to/notebook.py`
   (append `/wasm` for an interactive in-browser version when dependencies allow).
+- **Quarto notebook:** render it in the Quarto repo (`uv run quarto render`), publish with GitHub Pages and link to the page URL.
 - **Streamlit app:** deploy from a public repo on Streamlit Community Cloud and link to its URL. Keep credentials in the platform's secrets settings, never in the repo.
+
+Every Python project repo is managed with [uv](https://docs.astral.sh/uv/): commit `pyproject.toml` and `uv.lock` so visitors can reproduce it with `uv sync`.
 
 Before publishing anything, check it for credentials, confidential information, and restricted data.
