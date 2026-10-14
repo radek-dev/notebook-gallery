@@ -23,13 +23,13 @@ export const projects: Project[] = [
     tags: ['marimo', 'time series', 'pandas'],
     thumbnail: 'thumbnails/placeholder.svg',
     question: 'Which seasonal patterns drive sales, and how stable are they?',
-    approach: 'Decompose the series and compare seasons using pandas and Altair.',
+    approach: 'Generate a synthetic series and explore trend, seasonality and noise with sliders.',
     result: 'Placeholder: key takeaway goes here.',
-    dataNotes: 'Placeholder: public sample dataset; limitations noted here.',
+    dataNotes: 'Placeholder: synthetic data generated in the notebook; no real data.',
     links: {
       writeup: 'projects',
-      notebook: 'https://molab.marimo.io/github/OWNER/REPO/blob/main/sales_trends.py',
-      source: 'https://github.com/OWNER/REPO',
+      notebook: 'https://molab.marimo.io/github/radek-dev/marimo-notebooks/blob/main/sales_trends.py/wasm',
+      source: 'https://github.com/radek-dev/marimo-notebooks',
     },
   },
   {
