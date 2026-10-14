@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="A typeset paper with an equation and a bar chart">
+  <rect width="640" height="360" fill="#fff7ed"/>
+  <g transform="rotate(-4 320 180)">
+    <rect x="210" y="30" width="220" height="300" rx="6" fill="#fff" stroke="#e5d5c0" stroke-width="2"/>
+    <rect x="232" y="54" width="120" height="10" rx="3" fill="#14213d"/>
+    <rect x="232" y="76" width="176" height="5" rx="2" fill="#cbd5e1"/>
+    <rect x="232" y="90" width="160" height="5" rx="2" fill="#cbd5e1"/>
+    <text x="320" y="136" text-anchor="middle" font-family="Georgia, serif" font-size="20" font-style="italic" fill="#14213d">x̄ ± t · s/√n</text>
+    <rect x="232" y="156" width="176" height="5" rx="2" fill="#cbd5e1"/>
+    <g fill="#ea580c"><rect x="240" y="206" width="26" height="86"/><rect x="274" y="226" width="26" height="66"/><rect x="308" y="242" width="26" height="50"/><rect x="342" y="254" width="26" height="38"/><rect x="376" y="262" width="26" height="30"/></g>
+    <path d="M232 292H408" stroke="#14213d" stroke-width="2"/>
+  </g>
+</svg>

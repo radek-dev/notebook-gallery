@@ -10,7 +10,7 @@ The site is a static [Astro](https://astro.build) gallery and navigation hub. It
 | :-- | :-- |
 | Portfolio site | GitHub Pages (built from this repo) |
 | [marimo](https://marimo.io) notebooks | [molab](https://molab.marimo.io) previews of public GitHub repos ([marimo-notebooks](https://github.com/radek-dev/marimo-notebooks)) |
-| [Quarto](https://quarto.org) notebooks | GitHub Pages ([quarto-notebooks](https://github.com/radek-dev/quarto-notebooks)) |
+| [Quarto](https://quarto.org) notebooks and [Typst](https://typst.app) papers (PDF) | GitHub Pages ([quarto-notebooks](https://github.com/radek-dev/quarto-notebooks)) |
 | [Streamlit](https://streamlit.io) apps | Streamlit Community Cloud ([streamlit-apps](https://github.com/radek-dev/streamlit-apps)) |
 | Source code | Public GitHub repositories |
 
@@ -31,7 +31,7 @@ Pushing to `main` runs the workflow in `.github/workflows/deploy.yml`, which bui
 
 ## Adding a project
 
-Add an entry to `src/data/projects.ts`, and put its thumbnail in `public/thumbnails/`. Each project needs a title, short summary, topic tags, thumbnail, and links (notebook or app, source code). For each project, also describe the question, approach, result, data sources, and limitations.
+Add an entry to `src/data/projects.ts`, and put its thumbnail in `public/thumbnails/`. Each project needs a title, short summary, topic tags, thumbnail, and links (notebook, paper or app, source code). For each project, also describe the question, approach, result, data sources, and limitations.
 
 - **marimo notebook:** keep the `.py` file in a public repo and link to
   `https://molab.marimo.io/github/OWNER/REPO/blob/main/path/to/notebook.py`

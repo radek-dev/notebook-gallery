@@ -9,6 +9,7 @@ export interface Project {
   dataNotes: string;
   links: {
     notebook?: string;
+    paper?: string;
     app?: string;
     source?: string;
   };
@@ -70,6 +71,20 @@ export const projects: Project[] = [
     links: {
       notebook: 'https://radek-dev.github.io/quarto-notebooks/clt.html',
       source: 'https://github.com/radek-dev/quarto-notebooks',
+    },
+  },
+  {
+    title: 'Confidence Intervals Paper',
+    summary: 'A short Typst document with an equation, table and figure, published as a PDF.',
+    tags: ['Typst', 'statistics', 'uv'],
+    thumbnail: 'thumbnails/confidence-intervals.svg',
+    question: 'How is a confidence interval for a mean built, and how does its width scale with sample size?',
+    approach: 'A worked t-interval example typeset in Typst, compiled reproducibly with uv.',
+    result: 'The interval width shrinks as 1/sqrt(n), so quadrupling the sample halves it.',
+    dataNotes: 'Illustrative synthetic numbers only; reproduce with uv sync && uv run typst compile.',
+    links: {
+      paper: 'https://radek-dev.github.io/quarto-notebooks/papers/confidence-intervals.pdf',
+      source: 'https://github.com/radek-dev/quarto-notebooks/blob/main/papers/confidence-intervals.typ',
     },
   },
 ];
