@@ -40,11 +40,11 @@ export const projects: Project[] = [
     question: 'Can customers be grouped into meaningful, actionable segments?',
     approach: 'K-means clustering with adjustable parameters in a Streamlit UI.',
     result: 'Placeholder: key takeaway goes here.',
-    dataNotes: 'Placeholder: synthetic data; no personal information.',
+    dataNotes: 'synthetic data generated in the app; no personal information.',
     links: {
       writeup: 'projects',
-      app: 'https://YOUR-APP.streamlit.app',
-      source: 'https://github.com/OWNER/REPO',
+      app: 'https://notebook-gallery.streamlit.app/',
+      source: 'https://github.com/radek-dev/streamlit-apps',
     },
   },
   {
