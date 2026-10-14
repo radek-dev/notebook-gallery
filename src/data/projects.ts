@@ -43,7 +43,7 @@ export const projects: Project[] = [
     dataNotes: 'synthetic data generated in the app; no personal information.',
     links: {
       writeup: 'projects',
-      app: 'https://notebook-gallery.streamlit.app/',
+      app: 'https://customer-segments-demo.streamlit.app/',
       source: 'https://github.com/radek-dev/streamlit-apps',
     },
   },
