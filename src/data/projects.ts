@@ -8,7 +8,6 @@ export interface Project {
   result: string;
   dataNotes: string;
   links: {
-    writeup?: string;
     notebook?: string;
     app?: string;
     source?: string;
@@ -27,7 +26,6 @@ export const projects: Project[] = [
     result: 'Placeholder: key takeaway goes here.',
     dataNotes: 'Placeholder: synthetic data generated in the notebook; no real data.',
     links: {
-      writeup: 'projects',
       notebook: 'https://molab.marimo.io/github/radek-dev/marimo-notebooks/blob/main/sales_trends.py/wasm',
       source: 'https://github.com/radek-dev/marimo-notebooks',
     },
@@ -42,7 +40,6 @@ export const projects: Project[] = [
     result: 'Placeholder: key takeaway goes here.',
     dataNotes: 'synthetic data generated in the app; no personal information.',
     links: {
-      writeup: 'projects',
       app: 'https://customer-segments-demo.streamlit.app/',
       source: 'https://github.com/radek-dev/streamlit-apps',
     },
@@ -57,7 +54,6 @@ export const projects: Project[] = [
     result: 'Placeholder: key takeaway goes here.',
     dataNotes: 'synthetic data generated in the notebook; runs in the browser via /wasm.',
     links: {
-      writeup: 'projects',
       notebook: 'https://molab.marimo.io/github/radek-dev/marimo-notebooks/blob/main/forecasting.py/wasm',
       source: 'https://github.com/radek-dev/marimo-notebooks',
     },
