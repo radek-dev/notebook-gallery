@@ -29,6 +29,7 @@ const links = [
         {links.map((l) => (
           <a href={l.href} aria-current={Astro.url.pathname === l.href ? 'page' : undefined}>{l.label}</a>
         ))}
+        <a href="https://github.com/radek-dev/notebook-gallery">GitHub repo</a>
       </nav>
     </header>
     <main id="main">
@@ -37,7 +38,7 @@ const links = [
     <footer>
       <p>
         © {new Date().getFullYear()} ·
-        <a href="https://github.com/radek-dev">GitHub</a>
+        <a href="https://github.com/radek-dev/notebook-gallery">Source on GitHub</a>
       </p>
     </footer>
   </body>
