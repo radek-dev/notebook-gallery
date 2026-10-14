@@ -1,0 +1,50 @@
+---
+import type { Project } from '../data/projects';
+
+interface Props {
+  project: Project;
+}
+const { project } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const { links } = project;
+const items = [
+  links.writeup && { label: 'Read more', href: `${base}/${links.writeup}/` },
+  links.notebook && { label: 'View notebook', href: links.notebook },
+  links.app && { label: 'Open app', href: links.app },
+  links.source && { label: 'Source code', href: links.source },
+].filter(Boolean) as { label: string; href: string }[];
+---
+
+<article class="card">
+  <img src={`${base}/${project.thumbnail}`} alt="" width="640" height="360" loading="lazy" />
+  <div class="body">
+    <h3>{project.title}</h3>
+    <p>{project.summary}</p>
+    <ul class="tags" aria-label="Topics">
+      {project.tags.map((t) => <li>{t}</li>)}
+    </ul>
+    <dl>
+      <dt>Question</dt><dd>{project.question}</dd>
+      <dt>Approach</dt><dd>{project.approach}</dd>
+      <dt>Result</dt><dd>{project.result}</dd>
+      <dt>Data notes</dt><dd>{project.dataNotes}</dd>
+    </dl>
+    <ul class="links">
+      {items.map((i) => <li><a href={i.href}>{i.label}<span class="sr-only"> : {project.title}</span></a></li>)}
+    </ul>
+  </div>
+</article>
+
+<style>
+  .card { border: 1px solid var(--border); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; }
+  img { width: 100%; height: auto; display: block; }
+  .body { padding: 1rem; }
+  h3 { margin: 0 0 .5rem; }
+  ul { list-style: none; padding: 0; margin: .5rem 0; display: flex; flex-wrap: wrap; gap: .5rem; }
+  .tags li { background: #eef3fb; border-radius: 999px; padding: .1rem .6rem; font-size: .85rem; }
+  dl { font-size: .9rem; margin: .5rem 0; }
+  dt { font-weight: 600; }
+  dd { margin: 0 0 .4rem; color: var(--muted); }
+  .links { gap: 1rem; }
+  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+</style>

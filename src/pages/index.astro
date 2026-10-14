@@ -1,16 +1,24 @@
 ---
+import Layout from '../layouts/Layout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { projects } from '../data/projects';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Home">
+  <h1>Notebooks and apps, explored</h1>
+  <p>
+    A collection of data projects. Each one links to an interactive notebook or app,
+    the source code, and notes on the question, approach and limitations.
+  </p>
+  <h2>Featured projects</h2>
+  <div class="grid">
+    {projects.slice(0, 3).map((p) => <ProjectCard project={p} />)}
+  </div>
+  <p><a href={`${base}/projects/`}>See all projects</a></p>
+</Layout>
+
+<style>
+  .grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr)); }
+</style>
