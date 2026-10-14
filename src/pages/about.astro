@@ -4,10 +4,20 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="About">
   <h1>About</h1>
-  <p>Placeholder: a short introduction covering your background, interests and the kind of work shown here.</p>
-  <h2>Get in touch</h2>
+  <p>
+    This gallery collects data projects in one place: interactive notebooks, apps
+    and papers. The examples use synthetic data and are built to be reproduced.
+  </p>
+  <h2>How the projects are built</h2>
   <ul>
-    <li><a href="https://github.com/radek-dev">GitHub</a></li>
-    <li>Placeholder: LinkedIn or other professional profile link</li>
+    <li>Notebooks are written in <a href="https://marimo.io">marimo</a> or <a href="https://quarto.org">Quarto</a>, and apps in <a href="https://streamlit.io">Streamlit</a>.</li>
+    <li>Papers are typeset with <a href="https://typst.app">Typst</a>.</li>
+    <li>Python environments are managed with <a href="https://docs.astral.sh/uv/">uv</a>, so each project can be reproduced with <code>uv sync</code>.</li>
+    <li>All source code is public on GitHub.</li>
   </ul>
+  <h2>Get in touch</h2>
+  <p>
+    Find the code and open an issue or discussion on
+    <a href="https://github.com/radek-dev">GitHub</a>.
+  </p>
 </Layout>
