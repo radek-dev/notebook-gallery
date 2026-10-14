@@ -49,17 +49,17 @@ export const projects: Project[] = [
   },
   {
     title: 'Forecasting Walkthrough',
-    summary: 'A notebook walking through baseline and ML forecasting models.',
+    summary: 'A notebook comparing baseline and regression forecasting models.',
     tags: ['marimo', 'forecasting', 'WebAssembly'],
     thumbnail: 'thumbnails/forecasting.svg',
-    question: 'How much do ML models improve on a simple baseline forecast?',
-    approach: 'Compare naive, ETS and gradient boosting models with backtesting.',
+    question: 'How much does a trend-plus-seasonality model improve on simple baselines?',
+    approach: 'Backtest naive, seasonal naive and trend-plus-seasonality models on a held-out period.',
     result: 'Placeholder: key takeaway goes here.',
-    dataNotes: 'Placeholder: public dataset; runs in the browser via /wasm.',
+    dataNotes: 'synthetic data generated in the notebook; runs in the browser via /wasm.',
     links: {
       writeup: 'projects',
-      notebook: 'https://molab.marimo.io/github/OWNER/REPO/blob/main/forecasting.py/wasm',
-      source: 'https://github.com/OWNER/REPO',
+      notebook: 'https://molab.marimo.io/github/radek-dev/marimo-notebooks/blob/main/forecasting.py/wasm',
+      source: 'https://github.com/radek-dev/marimo-notebooks',
     },
   },
 ];
