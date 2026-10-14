@@ -13,20 +13,6 @@ The site is a static [Astro](https://astro.build) gallery and navigation hub. It
 | [Streamlit](https://streamlit.io) apps | Streamlit Community Cloud |
 | Source code | Public GitHub repositories |
 
-## Project structure
-
-```text
-/
-├── .github/workflows/deploy.yml  # GitHub Pages deployment
-├── public/                       # Static assets (favicon, thumbnails)
-├── src/
-│   └── pages/                    # One file per route
-├── astro.config.mjs              # `site` and `base` for GitHub Pages
-└── package.json
-```
-
-`astro.config.mjs` sets `site: https://radek-dev.github.io` and `base: /notebook-gallery`, so the site is served from a sub-path. Use the `base` prefix for internal links and asset URLs.
-
 ## Commands
 
 Requires Node.js 22.12 or later. Run from the project root:
