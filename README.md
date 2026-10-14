@@ -31,7 +31,7 @@ Pushing to `main` runs the workflow in `.github/workflows/deploy.yml`, which bui
 
 ## Adding a project
 
-Each project card needs a title, short summary, topic tags, thumbnail, and links (write-up, notebook or app, source code). For each project, also describe the question, approach, result, data sources, and limitations.
+Add an entry to `src/data/projects.ts`, and put its thumbnail in `public/thumbnails/`. Each project needs a title, short summary, topic tags, thumbnail, and links (write-up, notebook or app, source code). For each project, also describe the question, approach, result, data sources, and limitations.
 
 - **marimo notebook:** keep the `.py` file in a public repo and link to
   `https://molab.marimo.io/github/OWNER/REPO/blob/main/path/to/notebook.py`
