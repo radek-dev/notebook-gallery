@@ -13,10 +13,17 @@ const items = [
   links.app && { label: 'Open app', href: links.app },
   links.source && { label: 'Source code', href: links.source },
 ].filter(Boolean) as { label: string; href: string }[];
+const primaryLink = items[0];
 ---
 
 <article class="card">
-  <img src={`${base}/${project.thumbnail}`} alt="" width="640" height="360" loading="lazy" />
+  {primaryLink ? (
+    <a class="thumbnail" href={primaryLink.href} aria-label={`${primaryLink.label}: ${project.title}`}>
+      <img src={`${base}/${project.thumbnail}`} alt="" width="640" height="360" loading="lazy" />
+    </a>
+  ) : (
+    <img src={`${base}/${project.thumbnail}`} alt="" width="640" height="360" loading="lazy" />
+  )}
   <div class="body">
     <h3>{project.title}</h3>
     <p>{project.summary}</p>
@@ -39,6 +46,8 @@ const items = [
   .card { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; background: #fff; transition: box-shadow .2s, transform .2s; }
   .card:hover { box-shadow: 0 8px 24px rgba(20, 33, 61, .1); transform: translateY(-2px); }
   @media (prefers-reduced-motion: reduce) { .card { transition: none; } .card:hover { transform: none; } }
+  .thumbnail { display: block; }
+  .thumbnail:focus-visible { outline: 3px solid var(--accent-dark); outline-offset: -3px; }
   img { width: 100%; height: auto; display: block; }
   .body { padding: 1rem; }
   h3 { margin: 0 0 .5rem; }
