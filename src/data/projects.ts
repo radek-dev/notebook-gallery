@@ -31,7 +31,7 @@ export const projects: Project[] = [
     result: 'Compare linear, ranked, binary, categorical, latent and adjusted associations, including nonlinear dependence that Pearson can miss.',
     dataNotes: 'Synthetic data only. Examples illustrate interpretation, not causal effects. Polychoric estimation assumes latent normal variables.',
     links: {
-      notebook: 'https://molab.marimo.io/github/radek-dev/marimo-notebooks/blob/main/correlation_measures/summary.py/wasm?mode=read&show-code=false',
+      notebook: 'https://molab.marimo.io/github/radek-dev/marimo-notebooks/blob/main/correlation_measures/summary.py/wasm?mode=edit&show-code=true',
       source: 'https://github.com/radek-dev/marimo-notebooks/tree/main/correlation_measures',
     },
   },
