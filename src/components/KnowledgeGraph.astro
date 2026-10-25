@@ -63,7 +63,7 @@ const edges = projects.flatMap((project) => [
             class="node project"
             data-node={node.id}
             data-label={node.label}
-            href={node.project.links.notebook ?? node.project.links.paper ?? node.project.links.app ?? node.project.links.source}
+            href={node.project.links.notebook ?? node.project.links.mathNote ?? node.project.links.app ?? node.project.links.source}
             aria-label={`Open ${node.label}`}
           ><title>{node.project.summary}</title>{content}</a>
         ) : (

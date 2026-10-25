@@ -1,7 +1,7 @@
 export interface Project {
   title: string;
   summary: string;
-  technology: 'marimo' | 'Streamlit' | 'Quarto' | 'PDFs';
+  technology: 'marimo' | 'Streamlit' | 'Quarto' | 'Math Note';
   topics: string[];
   tags: string[];
   thumbnail: string;
@@ -11,7 +11,7 @@ export interface Project {
   dataNotes: string;
   links: {
     notebook?: string;
-    paper?: string;
+    mathNote?: string;
     app?: string;
     source?: string;
   };
@@ -100,18 +100,18 @@ export const projects: Project[] = [
     },
   },
   {
-    title: 'Confidence Intervals Paper',
-    summary: 'A short Typst paper on confidence intervals for a mean, published as a PDF.',
-    technology: 'PDFs',
+    title: 'Confidence Intervals Math Note',
+    summary: 'A short Typst math note on confidence intervals for a mean, published as a PDF.',
+    technology: 'Math Note',
     topics: ['Statistics', 'Confidence intervals'],
     tags: ['Typst', 'statistics', 'uv'],
     thumbnail: 'thumbnails/confidence-intervals.svg',
     question: 'How is a confidence interval for a mean built, and how does its width change with sample size?',
     approach: 'A worked t-interval example, typeset in Typst and compiled with uv.',
     result: 'The interval width shrinks in proportion to 1/√n, so quadrupling the sample size halves it.',
-    dataNotes: 'Illustrative numbers only. Reproduce with uv sync && uv run typst compile papers/confidence-intervals.typ.',
+    dataNotes: 'Illustrative numbers only. Source and build instructions are available in the linked repository.',
     links: {
-      paper: 'https://radek-dev.github.io/quarto-notebooks/papers/confidence-intervals.pdf',
+      mathNote: 'https://radek-dev.github.io/quarto-notebooks/papers/confidence-intervals.pdf',
       source: 'https://github.com/radek-dev/quarto-notebooks/blob/main/papers/confidence-intervals.typ',
     },
   },

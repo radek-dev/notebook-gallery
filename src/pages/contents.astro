@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import KnowledgeGraph from '../components/KnowledgeGraph.astro';
 import { projects, type Project } from '../data/projects';
 
-const technologies: Project['technology'][] = ['marimo', 'Streamlit', 'Quarto', 'PDFs'];
+const technologies: Project['technology'][] = ['marimo', 'Streamlit', 'Quarto', 'Math Note'];
 const topics = [...new Set(projects.flatMap((project) => project.topics))].sort();
 const indexes = [
   {
@@ -25,9 +25,9 @@ const indexes = [
 ];
 ---
 
-<Layout title="Contents" description="Browse notebooks, apps and papers by technology or topic.">
+<Layout title="Contents" description="Browse notebooks, apps and math notes by technology or topic.">
   <h1>Table of contents</h1>
-  <p>Browse by technology or subject. Each title opens the notebook, app or paper directly.</p>
+  <p>Browse by technology or subject. Each title opens the notebook, app or math note directly.</p>
   <nav aria-label="Contents sections">
     <a href="#knowledge-graph">Knowledge graph</a>
     <a href="#technology">By technology</a>
@@ -46,7 +46,7 @@ const indexes = [
             <ul>
               {group.projects.map((project) => (
                 <li>
-                  <a href={project.links.notebook ?? project.links.paper ?? project.links.app ?? project.links.source}>
+                  <a href={project.links.notebook ?? project.links.mathNote ?? project.links.app ?? project.links.source}>
                     {project.title}
                   </a>
                   <p>{project.summary}</p>

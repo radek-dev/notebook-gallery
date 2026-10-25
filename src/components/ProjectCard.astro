@@ -9,7 +9,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const { links } = project;
 const items = [
   links.notebook && { label: 'View notebook', href: links.notebook },
-  links.paper && { label: 'Read paper', href: links.paper },
+  links.mathNote && { label: 'Read math note', href: links.mathNote },
   links.app && { label: 'Open app', href: links.app },
   links.source && { label: 'Source code', href: links.source },
 ].filter(Boolean) as { label: string; href: string }[];
