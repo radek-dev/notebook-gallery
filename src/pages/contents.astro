@@ -1,0 +1,68 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { projects, type Project } from '../data/projects';
+
+const technologies: Project['technology'][] = ['marimo', 'Streamlit', 'Quarto', 'PDFs'];
+const topics = [...new Set(projects.flatMap((project) => project.topics))].sort();
+const indexes = [
+  {
+    id: 'technology',
+    title: 'By technology',
+    groups: technologies.map((technology) => ({
+      name: technology,
+      projects: projects.filter((project) => project.technology === technology),
+    })),
+  },
+  {
+    id: 'topic',
+    title: 'By topic',
+    groups: topics.map((topic) => ({
+      name: topic,
+      projects: projects.filter((project) => project.topics.includes(topic)),
+    })),
+  },
+];
+---
+
+<Layout title="Contents" description="Browse notebooks, apps and papers by technology or topic.">
+  <h1>Table of contents</h1>
+  <p>Browse by technology or subject. Each title opens the notebook, app or paper directly.</p>
+  <nav aria-label="Contents sections">
+    <a href="#technology">By technology</a>
+    <a href="#topic">By topic</a>
+  </nav>
+
+  {indexes.map((index) => (
+    <section aria-labelledby={index.id}>
+      <h2 id={index.id}>{index.title}</h2>
+      <div class="groups">
+        {index.groups.map((group) => (
+          <section class="group">
+            <h3>{group.name}</h3>
+            <ul>
+              {group.projects.map((project) => (
+                <li>
+                  <a href={project.links.notebook ?? project.links.paper ?? project.links.app ?? project.links.source}>
+                    {project.title}
+                  </a>
+                  <p>{project.summary}</p>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
+      </div>
+    </section>
+  ))}
+</Layout>
+
+<style>
+  h2 { scroll-margin-top: 8rem; }
+  .groups { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); }
+  .group { border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem; background: var(--surface); }
+  h3 { margin: 0 0 1rem; }
+  ul { margin: 0; padding-left: 1.25rem; }
+  li + li { margin-top: 1rem; }
+  li a { font-weight: 600; }
+  li p { margin: .25rem 0 0; color: var(--muted); font-size: .9rem; }
+</style>

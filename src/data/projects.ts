@@ -1,6 +1,8 @@
 export interface Project {
   title: string;
   summary: string;
+  technology: 'marimo' | 'Streamlit' | 'Quarto' | 'PDFs';
+  topics: string[];
   tags: string[];
   thumbnail: string;
   question: string;
@@ -20,6 +22,8 @@ export const projects: Project[] = [
   {
     title: 'Correlation Measures',
     summary: 'Nine interactive marimo notebooks exploring correlation, from Pearson and Spearman to distance correlation.',
+    technology: 'marimo',
+    topics: ['Statistics', 'Correlation'],
     tags: ['marimo', 'statistics', 'correlation'],
     thumbnail: 'thumbnails/correlation-measures.svg',
     question: 'Which association measure fits your data, and when can its value mislead?',
@@ -34,6 +38,8 @@ export const projects: Project[] = [
   {
     title: 'Sales Trends Explorer',
     summary: 'An interactive marimo notebook that explores trend and seasonality in sales.',
+    technology: 'marimo',
+    topics: ['Time series'],
     tags: ['marimo', 'time series', 'pandas'],
     thumbnail: 'thumbnails/sales-trends.svg',
     question: 'How do trend, seasonality and noise combine to shape a monthly sales series?',
@@ -48,6 +54,8 @@ export const projects: Project[] = [
   {
     title: 'Customer Segments App',
     summary: 'A Streamlit app that clusters customers and lets you inspect each segment.',
+    technology: 'Streamlit',
+    topics: ['Clustering'],
     tags: ['Streamlit', 'clustering', 'scikit-learn'],
     thumbnail: 'thumbnails/customer-segments.svg',
     question: 'Can customers be grouped into distinct segments by spend, visits and basket size?',
@@ -62,6 +70,8 @@ export const projects: Project[] = [
   {
     title: 'Forecasting Walkthrough',
     summary: 'A marimo notebook that compares simple baseline forecasts with a trend-plus-seasonality model.',
+    technology: 'marimo',
+    topics: ['Time series', 'Forecasting'],
     tags: ['marimo', 'forecasting', 'WebAssembly'],
     thumbnail: 'thumbnails/forecasting.svg',
     question: 'How much does a trend-plus-seasonality model improve on simple baselines?',
@@ -76,6 +86,8 @@ export const projects: Project[] = [
   {
     title: 'The Central Limit Theorem',
     summary: 'A reproducible Quarto article that uses simulation to illustrate the central limit theorem.',
+    technology: 'Quarto',
+    topics: ['Statistics', 'Sampling distributions'],
     tags: ['Quarto', 'statistics', 'uv'],
     thumbnail: 'thumbnails/central-limit-theorem.svg',
     question: 'How quickly do means of a skewed distribution become approximately normal?',
@@ -90,6 +102,8 @@ export const projects: Project[] = [
   {
     title: 'Confidence Intervals Paper',
     summary: 'A short Typst paper on confidence intervals for a mean, published as a PDF.',
+    technology: 'PDFs',
+    topics: ['Statistics', 'Confidence intervals'],
     tags: ['Typst', 'statistics', 'uv'],
     thumbnail: 'thumbnails/confidence-intervals.svg',
     question: 'How is a confidence interval for a mean built, and how does its width change with sample size?',
