@@ -18,6 +18,20 @@ export interface Project {
 // Sample projects built on synthetic data; replace or extend with real work.
 export const projects: Project[] = [
   {
+    title: 'Correlation Measures',
+    summary: 'Nine interactive marimo notebooks exploring correlation, from Pearson and Spearman to distance correlation.',
+    tags: ['marimo', 'statistics', 'correlation'],
+    thumbnail: 'thumbnails/correlation-measures.svg',
+    question: 'Which association measure fits your data, and when can its value mislead?',
+    approach: 'A summary guide links to nine notebooks with interactive synthetic examples, formulas, worked calculations and assumptions.',
+    result: 'Compare linear, ranked, binary, categorical, latent and adjusted associations, including nonlinear dependence that Pearson can miss.',
+    dataNotes: 'Synthetic data only. Examples illustrate interpretation, not causal effects. Polychoric estimation assumes latent normal variables.',
+    links: {
+      notebook: 'https://molab.marimo.io/github/radek-dev/marimo-notebooks/blob/main/correlation_measures/summary.py/wasm',
+      source: 'https://github.com/radek-dev/marimo-notebooks/tree/main/correlation_measures',
+    },
+  },
+  {
     title: 'Sales Trends Explorer',
     summary: 'An interactive marimo notebook that explores trend and seasonality in sales.',
     tags: ['marimo', 'time series', 'pandas'],
